@@ -1,8 +1,8 @@
 //packages
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
-const cTable = require("console.table");
 const art = require("ascii-art");
+require("console.table");
 
 //setup db
 const db = mysql.createConnection({
@@ -385,7 +385,7 @@ const showBudget = async (department) => {
 };
 
 //logo stuff
-art.font("emptrack_db", "doom")
+art.font("Employee Manager", "doom")
     .then((rendered) => {
         console.info(rendered);
     }).catch((err) => {
